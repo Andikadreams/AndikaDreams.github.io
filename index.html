@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="/Tugas/image/Logo.png">
+    <title>Tugas Jobsheet 14</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- Menyisipkan javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        * {
+            font-family: 'Gowun Dodum', sans-serif;
+        }
+
+        .mytitle {
+            width: 100%;
+            height: 250px;
+
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://movie-phinf.pstatic.net/20210715_95/1626338192428gTnJl_JPEG/movie_image.jpg');
+            background-position: center;
+            background-size: cover;
+
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mytitle>button {
+            width: 200px;
+            height: 50px;
+
+            background-color: transparent;
+            color: white;
+
+            border-radius: 50px;
+            border: 1px solid white;
+
+            margin-top: 10px;
+        }
+
+        .mytitle>button:hover {
+            border: 2px solid white;
+        }
+
+        .jumbotron {
+            margin-top: 30px;
+        }
+
+        .mycards {
+            margin: 20px auto 0px auto;
+            width: 95%;
+            max-width: 1200px;
+        }
+
+        .mycomment {
+            color: gray;
+        }
+
+        .mypost {
+            width: 95%;
+            max-width: 500px;
+            margin: 20px auto 0px auto;
+            padding: 20px;
+            box-shadow: 0px 0px 3px 0px gray;
+        }
+
+        .mybtns {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .mybtns>button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="top navbar navbar-expand-lg navbar-dark" style="background-color: rgba(14, 28, 75, 0.6)">
+        <div class="container">
+            <a class="navbar-brand" href="#">MyWebsite
+                <style>
+                    .navbar-brand {
+                        font-weight: bold;
+                        font-size: 25px;
+                    }
+                </style>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#foot">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Movie Rating</h1>
+            <p>Rating Film favoritmu</p>
+        </div>
+    </div>
+
+    <div class="mypost">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Enter movie URL">
+            <label for="floatingInput">Movie URL</label>
+        </div>
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01">Options</label>
+            <select class="form-select" id="inputGroupSelect01">
+                <option selected>-- Select a rating --</option>
+                <option value="1">⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="5">⭐⭐⭐⭐⭐</option>
+            </select>
+        </div>
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">Comment</label>
+        </div>
+        <div class="mybtns">
+            <button type="button" class="btn btn-dark">Save</button>
+            <button type="button" class="btn btn-outline-dark">Close</button>
+        </div>
+    </div>
+    <div class="mycards">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.tF3ulYqDOeK6TswHsyP8OgHaK-&pid=Api&P=0"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Avengers Assemble</h5>
+                        <p class="card-text">This is a
+                            great movie!
+                        </p>
+                        <p>⭐⭐⭐⭐⭐😀</p>
+                        <p class="mycomment">This is a comment</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.-xb9mzP6REVXvcZtfgbQMgAAAA&pid=Api&P=0"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Spiderman No Way Home</h5>
+                        <p class="card-text">This is a 
+                            great movie!
+                        </p>
+                        <p>⭐⭐⭐⭐😀</p>
+                        <p class="mycomment">This is a comment</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.2x8MZ7aFxb1hUsDHSNUCmgHaLG&pid=Api&P=0"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Pengabdi Setan 2</h5>
+                        <p class="card-text">This is a 
+                            great movie!
+                        </p>
+                        <p>⭐⭐⭐⭐⭐😀</p>
+                        <p class="mycomment">This is a fake comment</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.enH0hdo_Z6JFBDS0PIqI3QHaK-&pid=Api&P=0"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">KKN Desa Penari</h5>
+                        <p class="card-text">A great movie!!!
+                        </p>
+                        <p>⭐⭐⭐⭐😀</p>
+                        <p class="mycomment">This is a fake comment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center text-white" id="foot" style="background-color: #f1f1f1;">
+        <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <a class="text-dark">By Andika Ainur</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+</body>
+
+</html>
